@@ -1,0 +1,286 @@
+/* Global styles with mathematical research theme */
+:root {
+  --serif-font: "Computer Modern Serif", Georgia, "Times New Roman", serif;
+  --sans-font: "Computer Modern Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --paper-color: #ffffff;
+  --text-color: #222222;
+  --text-light: #555555;
+  --link-color: #0366d6;
+  --math-blue: #002f5c;
+  --math-light-blue: #e8f0f8;
+  --theorem-bg: #f8f9fa;
+  --code-bg: #f6f8fa;
+}
+
+/* Base styles */
+body {
+  margin: 0;
+  background-color: #f5f5f5;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
+
+.website-container {
+  min-height: 100vh;
+  font-family: var(--serif-font);
+}
+
+/* Header styles */
+.header {
+  background: var(--math-blue);
+  padding: 2rem 0;
+  border-bottom: 4px solid #001f3d;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.header h1 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: normal;
+  margin: 0;
+  font-family: var(--serif-font);
+  line-height: 1.2;
+}
+
+.header p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 0.5rem;
+  font-family: var(--sans-font);
+  font-size: 1.2rem;
+}
+
+/* Main content styles */
+.main-content {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .content-grid {
+    grid-template-columns: 280px 1fr;
+  }
+}
+
+/* Sidebar styles */
+.sidebar {
+  position: sticky;
+  top: 2rem;
+}
+
+.nav-container {
+  background-color: var(--paper-color);
+  border: 1px solid #e1e4e8;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.nav-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border: none;
+  background: none;
+  color: var(--text-color);
+  cursor: pointer;
+  font-family: var(--sans-font);
+  font-size: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e1e4e8;
+  transition: background-color 0.2s;
+}
+
+.nav-button:last-child {
+  border-bottom: none;
+}
+
+.nav-button:hover {
+  background-color: var(--math-light-blue);
+}
+
+.nav-button.active {
+  background-color: var(--math-light-blue);
+  color: var(--math-blue);
+  font-weight: 500;
+}
+
+.nav-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.75rem;
+  color: currentColor;
+}
+
+/* Content area styles */
+.content-card {
+  background-color: var(--paper-color);
+  padding: 2.5rem;
+  border: 1px solid #e1e4e8;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.content-card h2 {
+  color: var(--math-blue);
+  font-size: 1.8rem;
+  font-weight: normal;
+  margin: 0 0 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #eaecef;
+}
+
+.content-card h3 {
+  color: var(--text-color);
+  font-size: 1.4rem;
+  font-weight: normal;
+  margin: 1.5rem 0 1rem;
+}
+
+.content-card p {
+  color: var(--text-color);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+/* Mathematical notation and equations */
+.equation {
+  background-color: var(--theorem-bg);
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-left: 4px solid var(--math-blue);
+  font-family: var(--serif-font);
+  overflow-x: auto;
+}
+
+/* Authors section */
+.authors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.author-card {
+  background-color: var(--paper-color);
+  padding: 1.5rem;
+  border: 1px solid #e1e4e8;
+  border-radius: 4px;
+}
+
+.author-card h3 {
+  color: var(--math-blue);
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem;
+}
+
+.author-card p {
+  color: var(--text-light);
+  margin: 0.25rem 0;
+  font-family: var(--sans-font);
+}
+
+/* Abstract section */
+.abstract-card {
+  background-color: var(--theorem-bg);
+  padding: 2rem;
+  border-left: 4px solid var(--math-blue);
+  margin-bottom: 2rem;
+}
+
+.abstract-card p {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Lists */
+.content-card ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 1rem 0;
+}
+
+.content-card ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.content-card ul li:before {
+  content: "•";
+  color: var(--math-blue);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Methodology section */
+.methodology-section {
+  display: grid;
+  gap: 2rem;
+}
+
+.methodology-card {
+  background-color: var(--paper-color);
+  padding: 1.5rem;
+  border: 1px solid #e1e4e8;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+/* Code blocks */
+pre {
+  background-color: var(--code-bg);
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* LaTeX-style figure captions */
+.figure-caption {
+  text-align: center;
+  font-style: italic;
+  color: var(--text-light);
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Theorem-like environments */
+.theorem, .lemma, .proposition {
+  background-color: var(--theorem-bg);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-left: 4px solid var(--math-blue);
+}
+
+.theorem-title {
+  font-weight: bold;
+  color: var(--math-blue);
+  margin-bottom: 0.5rem;
+}
+
+/* References and citations */
+.reference {
+  padding-left: 2rem;
+  text-indent: -2rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}

@@ -1,0 +1,5 @@
+src/data/*
+stats/node_modules/
+stats/package-lock.json
+package-lock.json
+*.csv
