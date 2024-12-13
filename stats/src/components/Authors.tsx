@@ -23,8 +23,8 @@ const authors: AuthorProps[] = [
   },
   {
     name: "Deep Shukla",
-    github: "https://github.com/deepshukla",
-    linkedin: "https://linkedin.com/in/deepshukla",
+    github: "https://github.com/623dks",
+    linkedin: "https://www.linkedin.com/in/deep-shukla-b4035220a/",
     email: "Deep.Shukla@colorado.edu"
   }
 ];
