@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Book, Users, FileText, Settings, GitGraph, Layers, Activity, PieChart } from 'lucide-react';
+import { Book, Users, FileText, Settings, GitGraph, Layers, Activity, PieChart, Pi, MessageSquare, BookText, BookOpen } from 'lucide-react';
 import './index.css';
 
 import Header from './components/Header';
@@ -12,7 +12,10 @@ import Methodology from './components/Methodology';
 import ModelArchitectures from './components/ModelArchitecture';
 import TrainingProtocol from './components/TrainingProtocol';
 import VisualizationAnalysis from './components/VisualizationAnalysis';
+import TrainingDynamics from './components/TrainingDynamics';
 import { Section } from './components/types';
+import { Conclusion, Discussion, ModelPerformance } from './components/FinalComponents';
+import References from './components/References';
 
 const App: React.FC = () => {
   const [activeSection, setActiveSection] = useState('introduction');
@@ -57,6 +60,31 @@ const App: React.FC = () => {
       title: 'Visualization Analysis',
       icon: PieChart,
       component: VisualizationAnalysis
+    },
+    trainingDynamics: {
+      title: 'Training Dynamics',
+      icon: Pi,
+      component: TrainingDynamics
+    },
+    modelPerformance: {
+      title: 'Model Performance',
+      icon: Activity,
+      component: ModelPerformance
+    },
+    discussion: {
+      title: 'Discussion',
+      icon: MessageSquare,
+      component: Discussion
+    },
+    conclusion: {
+      title: 'Conclusion',
+      icon: BookText,
+      component: Conclusion
+    },
+    references: {
+      title: 'References',
+      icon: BookOpen,
+      component: References
     }
   };
 
