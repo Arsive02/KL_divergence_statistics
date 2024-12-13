@@ -42,12 +42,12 @@ src/
 
 1. Clone the repository:
 ```bash
-[git clone https://github.com/yourusername/kl-divergence-research-website.git](https://github.com/Arsive02/KL_divergence_statistics)
+git clone https://github.com/yourusername/kl-divergence-research-website.git
 ```
 
 2. Install dependencies:
 ```bash
-cd kl-divergence-research-website
+cd stats
 npm install
 ```
 
