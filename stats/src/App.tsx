@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Book, Users, FileText, Settings } from 'lucide-react';
+import { Book, Users, FileText, Settings, GitGraph, Layers, Activity, PieChart } from 'lucide-react';
 import './index.css';
 
 import Header from './components/Header';
@@ -7,18 +7,17 @@ import Navigation from './components/Navigation';
 import Introduction from './components/Introduction';
 import Authors from './components/Authors';
 import Abstract from './components/Abstract';
+import TheoreticalFramework from './components/TheoreticalFramework';
 import Methodology from './components/Methodology';
+import ModelArchitectures from './components/ModelArchitecture';
+import TrainingProtocol from './components/TrainingProtocol';
+import VisualizationAnalysis from './components/VisualizationAnalysis';
 import { Section } from './components/types';
 
 const App: React.FC = () => {
   const [activeSection, setActiveSection] = useState('introduction');
   
   const sections: { [key: string]: Section } = {
-    introduction: {
-      title: 'Introduction',
-      icon: Book,
-      component: Introduction
-    },
     authors: {
       title: 'Authors',
       icon: Users,
@@ -29,10 +28,35 @@ const App: React.FC = () => {
       icon: FileText,
       component: Abstract
     },
+    introduction: {
+      title: 'Introduction',
+      icon: Book,
+      component: Introduction
+    },
+    theoreticalFramework: {
+      title: 'Theoretical Framework',
+      icon: GitGraph,
+      component: TheoreticalFramework
+    },
     methodology: {
-      title: 'Methodology',
+      title: 'Datasets',
       icon: Settings,
       component: Methodology
+    },
+    modelArchitectures: {
+      title: 'Model Architectures',
+      icon: Layers,
+      component: ModelArchitectures
+    },
+    trainingProtocol: {
+      title: 'Training Protocol',
+      icon: Activity,
+      component: TrainingProtocol
+    },
+    visualizationAnalysis: {
+      title: 'Visualization Analysis',
+      icon: PieChart,
+      component: VisualizationAnalysis
     }
   };
 
