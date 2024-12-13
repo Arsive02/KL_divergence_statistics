@@ -2,7 +2,7 @@
 
 A React-based website showcasing research on Kullback-Leibler Divergence and its applications in machine learning. This project presents an academic paper in an interactive web format, complete with navigation and responsive design.
 
-![KL Divergence website](https://kl-divergence-statistics.vercel.app/)
+Website: https://kl-divergence-statistics.vercel.app/
 
 ## 🚀 Features
 
