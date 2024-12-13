@@ -4,6 +4,8 @@ A React-based website showcasing research on Kullback-Leibler Divergence and its
 
 Website: https://kl-divergence-statistics.vercel.app/
 
+Datasets: https://drive.google.com/drive/folders/1v5V6oQSznilQLaszxxOB_JplZwhS1Zms?usp=sharing
+
 ## 🚀 Features
 
 - Interactive navigation between paper sections
